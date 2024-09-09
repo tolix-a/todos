@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  background-color: #eee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+.todolist {
+  max-width: 480px;
+  margin: 50px auto;
+}
+.todolist h2 {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 100;
+  letter-spacing: 6px;
+  margin: 16px 0;
+  color: #dbb6b6;
+}
+.todolist .wrap {
+  background-color: white;
+  border-radius: 30px;
+  padding: 32px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+.todolist .insert {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+.todolist .insert input {
+  width: calc(100% - 50px);
+  height: 50px;
+  vertical-align: middle;
+  border: none;
+  outline: none;
+}
+.todolist .insert input::-moz-placeholder {
+  color: #aaa;
+}
+.todolist .insert input::placeholder {
+  color: #aaa;
+}
+.todolist .insert button {
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+.todolist ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.todolist ul li {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.todolist ul li p {
+  margin: 0;
+}
+.todolist ul li p input {
+  display: none;
+}
+.todolist ul li p label {
+  display: inline-block;
+  width: 34px;
+  height: 18px;
+  background-color: rgb(255, 110, 110);
+  border-radius: 18px;
+  margin-right: 10px;
+}
+.todolist ul li p label::after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: block;
+  background-color: white;
+  transform: translate(2px, 2px);
+  transition: 0.5s;
+}
+.todolist ul li p input:checked + label {
+  background-color: #ddd;
+}
+.todolist ul li p input:checked + label::after {
+  transform: translate(18px, 2px);
+}
+.todolist ul li button {
+  background-color: transparent;
+  border: none;
+  color: rgb(255, 124, 124);
+  margin-right: 15px;
+  display: none;
+}
+.todolist ul li:hover button {
+  display: block;
+}
+.todolist .footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0 0;
+  font-size: 0.8rem;
+  color: #999;
+}
+.todolist .footer button {
+  background-color: transparent;
+  border: 1px solid transparent;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  color: #999;
+}
+.todolist .footer button:hover, .todolist .footer button.active {
+  border: 1px solid #f00;
+  color: black;
+}

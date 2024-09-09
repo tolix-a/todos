@@ -1,0 +1,108 @@
+body{
+   margin:0; background-color: #eee;
+}
+*{
+   box-sizing: border-box;
+}
+button{cursor: pointer;}
+
+.todolist{
+   max-width:480px;
+   margin:50px auto;
+
+   h2{
+      text-align: center;
+      font-size:4rem;
+      font-weight: 100;
+      letter-spacing: 6px;
+      margin:16px 0;
+      color:#dbb6b6;
+   }
+   .wrap{
+      background-color: white;        
+      border-radius: 30px;
+      padding:32px;
+      box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+   }
+   .insert{
+      border-bottom:1px solid #ddd;
+      padding-bottom:10px;
+      input{
+         width:calc(100% - 50px);
+         height:50px;
+         vertical-align: middle;
+         border:none;
+         outline: none;
+         &::placeholder{ color:#aaa; }
+      }
+      button{
+         width:40px; height:40px;
+         font-size:1.2rem; 
+         vertical-align: middle;           
+      }
+   }
+
+   ul{
+      list-style-type: none;
+      margin:0; padding:0;
+      li{
+         border-bottom: 1px solid #ddd;
+         padding:20px 0;
+         display: flex;
+         justify-content: space-between;
+         p{
+            margin:0;
+            input{display: none;}
+            label{
+               display: inline-block;
+               width: 34px; height: 18px;
+               background-color: rgb(255, 110, 110);
+               border-radius: 18px;
+               margin-right: 10px;
+               &::after{
+                  content: '';
+                  width: 14px; height: 14px;
+                  border-radius: 50%;
+                  display: block;
+                  background-color: white;
+                  transform: translate(2px, 2px);
+                  transition: .5s;
+               }
+            }
+            input:checked + label{
+               background-color: #ddd;
+               &::after{
+                  transform: translate(18px, 2px);
+               }
+            }
+         }
+         button{
+            background-color: transparent;
+            border: none;
+            color:rgb(255, 124, 124);
+            margin-right:15px;
+            display: none;
+         }
+         &:hover button{display: block;}
+      }
+   }
+
+   .footer{
+      display: flex;
+      justify-content: space-between;
+      padding:15px 0 0;
+      font-size:.8rem;
+      color:#999;
+      button{
+         background-color: transparent;
+         border:1px solid transparent;
+         font-size:.8rem;
+         padding:5px 10px;
+         color:#999;
+      }
+      button:hover,button.active{ 
+         border:1px solid #f00;
+         color:black
+      }
+   }
+}
