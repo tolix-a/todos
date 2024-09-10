@@ -10,7 +10,7 @@ const Item = ({obj}) => {
    return (
       <li>
          <p>
-            <input id={obj.id} type='checkbox' checked={obj.status} onChange={todoStatus}/>
+            <input id={obj.id} type='checkbox' defaultChecked={obj.status} onChange={todoStatus}/>
             <label htmlFor={obj.id}></label>
             {obj.todo}
          </p>

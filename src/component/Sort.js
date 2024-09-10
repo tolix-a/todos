@@ -8,7 +8,7 @@ const Sort = () => {
    useEffect(()=>{
       sortCtrl({type});
    },[data,type])
-
+   
    return (
       <div className='footer'>
          <div>{sortData.length} items</div>
