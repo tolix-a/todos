@@ -31,7 +31,7 @@ const store = create((set)=>({
          set( (state)=> {
             let update = [...state.data].map((obj)=>{
                         if(action.data.id == obj.id){
-                           obj.status = action.status
+                           obj.status = action.data.status
                         }
                         return obj;
                      })
